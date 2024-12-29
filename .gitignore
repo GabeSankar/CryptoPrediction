@@ -1,0 +1,5 @@
+# ignore large files
+Data/train.csv
+Data/test.csv
+# ignore logs
+logs/
