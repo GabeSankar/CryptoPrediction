@@ -3,12 +3,11 @@
 This project aims to develop a novel self-attending LSTM to predict crypto prediciton.
 
 ## Table of Contents
-1. [Data](#data)
-2. [Task](#Task)
-3. [AttnLSTM](#Attn)
+1. [AttnLSTM](#AttnLSTM)
+2. [Data](#Dataset)
 
 ---
-
+# AttnLSTM
 ## Self-Attention
 
 Self-Attention is a mechanism in neural networks that helps the model focus on different parts of an input sequence when making predictions for each element in the sequence. It's particularly effective in natural language processing, where it helps capture long-term dependencies better than traditional recurrent models.
@@ -72,30 +71,10 @@ In this project, the LSTM model captures temporal dependencies in the sequence, 
 
 ---
 
-## Dataset Structure
+## Dataset 
 
 The dataset consists of two files:
 - **`train.csv`**: Used for training the model.
 - **`test.csv`**: Used for evaluating model performance.
 
-Each file should contain sequential data with columns as follows:
-
-| Column Name | Description                            |
-|-------------|----------------------------------------|
-| `sequence`  | Input sequence data                    |
-| `label`     | Target output (for training)           |
-
-### Example
-
-```plaintext
-train.csv
-| sequence           | label |
-|--------------------|-------|
-| 0.1, 0.2, 0.3, ... | 1     |
-| 0.4, 0.5, 0.6, ... | 0     |
-
-test.csv
-| sequence           | label |
-|--------------------|-------|
-| 0.7, 0.8, 0.9, ... | 1     |
-| 0.5, 0.4, 0.3, ... | 0     |
+These files are not uploaded due to their large file size. The files are from this kaggle challenge:[ https://www.kaggle.com/competitions/directional-forecasting-in-cryptocurrencies/data](url)
