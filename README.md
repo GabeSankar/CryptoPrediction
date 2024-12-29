@@ -19,11 +19,11 @@ Self-Attention is a mechanism in neural networks that helps the model focus on d
 
 The attention score for each pair of input elements is calculated as:
 
-\[
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q \cdot K^T}{\sqrt{d_k}}\right) \cdot V
-\]
 
-where \( d_k \) is the dimensionality of the query/key vectors, and the softmax function ensures that attention scores are normalized.
+![text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q \cdot K^T}{\sqrt{d_k}}\right) \cdot V](https://latex.codecogs.com/svg.image?\text{Attention}(Q,K,V)=\text{softmax}\left(\frac{Q\cdot&space;K^T}{\sqrt{d_k}}\right)\cdot&space;V&space;)
+
+
+where ![d_k](https://latex.codecogs.com/svg.image?d_k) is the dimensionality of the query/key vectors, and the softmax function ensures that attention scores are normalized.
 
 In this project, self-attention helps capture complex relationships between tokens, especially for longer sequences, making it a powerful alternative to LSTM.
 
@@ -41,31 +41,25 @@ LSTMs are a type of recurrent neural network (RNN) that excel at learning sequen
 
 The LSTM equations are as follows:
 
-\[
-f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-\]
-\[
-i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-\]
-\[
-\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
-\]
-\[
-C_t = f_t * C_{t-1} + i_t * \tilde{C}_t
-\]
-\[
-o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-\]
-\[
-h_t = o_t * \tanh(C_t)
-\]
+
+![f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)](https://latex.codecogs.com/svg.image?f_t=\sigma(W_f\cdot[h_{t-1},x_t]&plus;b_f))
+
+![i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)](https://latex.codecogs.com/svg.image?i_t=\sigma(W_i\cdot[h_{t-1},x_t]&plus;b_i))
+
+![tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)](https://latex.codecogs.com/svg.image?\tilde{C}_t=\tanh(W_C\cdot[h_{t-1},x_t]&plus;b_C))
+
+![C_t = f_t * C_{t-1} + i_t * \tilde{C}_t](https://latex.codecogs.com/svg.image?C_t=f_t*C_{t-1}&plus;i_t*\tilde{C}_t)
+
+![o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)](https://latex.codecogs.com/svg.image?o_t=\sigma(W_o\cdot[h_{t-1},x_t]&plus;b_o))
+
+![h_t = o_t * \tanh(C_t)](https://latex.codecogs.com/svg.image?h_t=o_t*\tanh(C_t))
 
 where:
-- \( f_t \): Forget gate
-- \( i_t \): Input gate
-- \( C_t \): Cell state
-- \( o_t \): Output gate
-- \( h_t \): Hidden state
+- \( ![f_t](https://latex.codecogs.com/svg.image?f_t) \): Forget gate
+- \( ![i_t](https://latex.codecogs.com/svg.image?i_t) \): Input gate
+- \( ![C_t](https://latex.codecogs.com/svg.image?C_t) \): Cell state
+- \( ![o_t](https://latex.codecogs.com/svg.image?o_t) \): Output gate
+- \( ![h_t](https://latex.codecogs.com/svg.image?h_t) \): Hidden state
 
 In this project, the LSTM model captures temporal dependencies in the sequence, which is useful when each data point in `train.csv` and `test.csv` represents a sequential step.
 
